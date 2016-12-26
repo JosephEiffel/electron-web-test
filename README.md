@@ -5,16 +5,20 @@
 
 ****
 
-	<a onclick="hmptestSend(11">test</a>
-	<script>
-	function hmptestSend(num){
-      alert('Number is send from the webview:'+num);
-	    console.log(num);
-	}
-	function hmptestReceive(num){
-	    alert('Number is received from the webview:'+num);
-	}
-	</script>
+    <a onclick="hmptestSend(11)">test</a>
+    <script>
+    //                    function hmptestSend(num){
+    //                        alert('Number is send from the webview:'+num);
+    //                        console.log(num);
+    //                    }
+        function hmptestSend(num){
+            alert('{"method": "add","param": 1}');
+            console.log('{"method": "add","param": 1}');
+        }
+        function hmptestReceive(num){
+            alert('Number is received from the webview:'+num);
+        }
+    </script>
 
 
 webpage 将 11打印到控制台，webview监听到控制台的11   
