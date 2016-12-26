@@ -8,6 +8,7 @@
 	<a onclick="hmptestSend(11">test</a>
 	<script>
 	function hmptestSend(num){
+      alert('Number is send from the webview:'+num);
 	    console.log(num);
 	}
 	function hmptestReceive(num){
