@@ -1,11 +1,7 @@
-// window.onresize = doLayout;
-
 const $ = require('jquery');
-
 var webview = document.querySelector('webview');
 
-
-onload = function() {
+aa = function() {
      var loadstart = function() {
        console.log("1");
      }
@@ -16,20 +12,15 @@ onload = function() {
      webview.addEventListener("did-stop-loading", loadstop);
 }
 
-function doLayout() {
-
-}
 webview.addEventListener("dom-ready", function() {
   webview.openDevTools();
-  var  hmp_login = $('.hmp_login');
-  console.log(hmp_login);
-  // hmp_login.addEventListener('click', abc);
 });
-var abc  = function(){
 
-}
-
-
-// $('.hmp_login').onclick = function() {
-// console.log("dddddd");
-// };
+webview.addEventListener('console-message', function(e) {
+  console.log('Number is received from the webpage:', e.message);
+  var num = e.message*1+20;
+  console.log('Number is send from the webpage:'+num);
+  var str = "hmptestReceive("+num+")";
+  // console.log('Number is send from the webpage:'+str);
+  webview.executeJavaScript(str);
+});
