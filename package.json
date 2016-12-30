@@ -1,16 +1,12 @@
 {
-  "name": "hmp",
-  "version": "1.18.0",
-  "description": "cim120",
-  "main": "main.js",
-  "scripts": {
-    "start": "electron .",
+  "name"    : "hmp",
+  "version" : "1.0.0",
+  "main"    : "main.js",
+  "scripts" : {
+    "start" : "electron main.js",
     "package":"electron-packager ./ --platform win32 --arch=ia32 --overwrite --asar"
   },
   "devDependencies": {
-  "electron-prebuilt": "^1.2.0"
-  },
-
-  "author": "lilg",
-  "license": "ISC"
+    "electron-prebuilt": "^1.2.0"
+  }
 }
